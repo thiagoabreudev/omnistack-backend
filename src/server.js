@@ -30,6 +30,6 @@ app.use(require('./routes')); // Importar as rotas
 app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp'))) // Para servir os arquivos estaticos
 
 
-app.listen(3333)
+app.listen(process.env.PORT || 3333)
 
 module.exports = app;
